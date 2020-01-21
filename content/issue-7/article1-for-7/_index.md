@@ -6,3 +6,7 @@ layout: "single"
 ---
 
 # issue 7, article 1
+
+Before going into edit mode, one needs to change the branch up top ..
+
+* or set permission or some otehr setup ..
