@@ -1,0 +1,21 @@
+
+{{ define "main" }}
+
+<h2>
+  This is a default list template, sitting in layouts/_default/list.html.
+  It should not be used; instead, create layouts/issue-X/list.html
+</h2>
+
+<article>
+  <section>
+    <ul>
+      <!-- Ranges through content/posts/*.md -->
+      {{ range where .Pages ".Params.type" "article" }}
+          <li>
+              <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a>
+          </li>
+      {{ end }}
+    </ul>
+  </section>
+</article>
+{{ end }}

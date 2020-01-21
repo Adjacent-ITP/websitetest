@@ -1,0 +1,8 @@
+@import './variables';
+
+body {
+  background-color: var(--bg);
+  a {
+    background-color: yellow;
+  }
+}

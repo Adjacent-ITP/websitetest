@@ -1,0 +1,18 @@
+
+{{ define "main" }}
+
+<h1> layouts/issue-7/list </h1>
+<article>
+  <section>
+    <ul>
+      <!-- Ranges through content/posts/*.md -->
+      {{ range where .Pages ".Params.type" "article" }}
+          <li>
+              <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a>
+          </li>
+      {{ end }}
+    </ul>
+
+  </section>
+</article>
+{{ end }}
