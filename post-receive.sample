@@ -1,0 +1,26 @@
+#!/bin/sh
+
+staging_dir=/adjacent/staging
+staging_branch=staging
+production_dir=/adjacent/production
+production_branch=production
+
+
+echo "Starting post-receive procedure..."
+
+while read oldrev newrev refname
+do
+  branch=$(git rev-parse --symbolic --abbrev-ref $refname)
+
+  if [ "$staging_branch" == "$branch" ]; then
+    echo "Checking-out $staging_branch branch to $staging_dir";
+    GIT_WORK_TREE="$staging_dir" git checkout -f $staging_branch;
+
+  elif [ "$production_branch" == "$branch" ]; then
+    echo "Checking-out $production_branch branch to $production_dir";
+    GIT_WORK_TREE="$production_dir" git checkout -f $production_branch;
+
+  else
+    echo "This post-receive procedure only checks out the '$staging_branch' and '$production_branch' branches. Merge local branch with the $staging_branch first, and push. If all good, merge $staging_branch with the $production_branch and push."
+  fi
+done

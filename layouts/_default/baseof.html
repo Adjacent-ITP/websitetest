@@ -8,6 +8,8 @@
         {{ .Site.Title }}
       {{ end }}
     </title>
+    {{ $style := resources.Get "landing-page/styles/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
   </head>
   <body>
     <!-- Code that all your templates share, like a header -->

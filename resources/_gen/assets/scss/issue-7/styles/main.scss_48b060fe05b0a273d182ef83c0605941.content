@@ -1,1 +1,1 @@
-html{--bg: blue}body{color:red}body{background-color:var(--bg)}body a{background-color:#ff0}
+html{--bg: blue}body{color:red}body{background-color:var(--bgColor);color:var(--textColor);font-family:sans-serif}

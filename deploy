@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# NOT TESTED
+
+if [ -z "$1" ]
+  then
+    echo "...what branch??..."
+else
+  if [ -z "$2" ]
+    then
+      echo "...whats the commit message??..."
+  else
+    rm -rf $PWD/public
+    hugo
+    git add -A
+    git commit -m "$2"
+    git push server "$1"
+  fi
+fi

@@ -1,0 +1,25 @@
+
+{{ define "main" }}
+
+  <p>
+    This will be the landing page of the **issue**.
+    <br><br>
+    This text is at `/layouts/_issue-template/list.html`.
+    <br><br>
+    Once copied, this text should be removed.
+    <em> Do not modify the contents in `_issue-template` </em>
+  </p>
+
+  <article>
+    <section>
+      <ul>
+        <!-- Ranges through content/posts/*.md -->
+        {{ range where .Pages ".Params.type" "article" }}
+            <li>
+                <a href="{{.Permalink}}">{{.Title}}</a>
+            </li>
+        {{ end }}
+      </ul>
+    </section>
+  </article>
+{{ end }}

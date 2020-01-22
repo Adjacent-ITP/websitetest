@@ -1,6 +1,6 @@
 ---
-title: "adjacent main landing page"
-description: "links to all issues"
+title: "Adjacent Home Page"
+description: "A landing page that links to all issues"
 ---
 
-# this is the homepage for everything
+The text content for this page (ie this line) is at `/content/_index.md`, and the template is at `/layouts/index.html`

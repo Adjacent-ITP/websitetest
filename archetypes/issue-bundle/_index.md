@@ -1,6 +1,8 @@
 ---
-title: "issue landing page"
-description: "links to all articles of this specific issue"
+title: "Adjacent: Issue XX: Theme Name"
+description: "A one line description about the issue's theme"
 ---
 
-# issue 7, here is the theme BLAHBLAH
+# Adjacent: New issue
+
+This is the default landing page for a new issue.  

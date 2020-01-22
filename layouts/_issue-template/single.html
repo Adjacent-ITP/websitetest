@@ -1,0 +1,17 @@
+{{ define "main" }}
+
+  <p>
+    This will be the template for an article (with `layout = "single"`) of the **issue**.
+    <br><br>
+    This text is at `/layouts/_issue-template/single.html`.
+    <br><br>
+    Once copied, this text should be removed.
+    <em> Do not modify the contents in `_issue-template` </em>
+  </p>
+
+  <article>
+    <section>
+      {{- .Content -}}
+    </section>
+  </article>
+{{ end }}

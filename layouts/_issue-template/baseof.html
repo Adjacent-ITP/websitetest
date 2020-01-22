@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+      {{ .Title }}
+    </title>
+    {{ $style := resources.Get "_issue-template/styles/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
+  </head>
+  <body>
+
+    <p>
+      This is the base HTML structure for an **issue**.
+      <br><br>
+      This text is at `/layouts/_issue-template/baseof.html`.
+      <br><br>
+      Once copied, this text should be removed.
+      <em> Do not modify the contents in `_issue-template` </em>
+    </p>
+
+    {{ block "main" . }}
+    {{ end }}
+  </body>
+</html>
