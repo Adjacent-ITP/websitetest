@@ -8,7 +8,7 @@ This is a work in progress. It assumes you have Hugo set up locally, and have cl
 
 To create a new Adjacent Issue, lets say `issue-X`, follow these steps:
 
-1. **Create assets directory:** `/assets/_issue-template` and change the name of the new folder to `issue-X`.
+1. **Create assets directory:** Duplicate `/assets/_issue-template` and change the name of the new folder to `issue-X`.
 
    i.e, you will have this:
 
