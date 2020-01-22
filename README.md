@@ -113,10 +113,10 @@ Editors can use Github's GUI for editing, following these steps (will be modifie
 
 * There will be 4 active branches --  `development`, `staging`, `production` and `editors`
 * Dev work will be carried out on `development`.
-* Editors changes on the `editors` branch can be merged into `development` as needed
+* Editors change the `editors` branch, and developers can merge changes into `development` as needed
 * `development` will be merged into `staging`; and `staging` into `production` as needed (only one-directional)
 * There will be 2 remote repos
-  * `github` which refers to the repo stored on git, used for collaboration.
+  * `github` which refers to the repo stored on github, used for collaboration.
   * `server` which refers to a bare repo stored on Shawn / ITP's servers
 
 * Using `post-receive` hooks on `server`, (sample file `post-receive.sample`), the branch will be extracted to the correct directory
