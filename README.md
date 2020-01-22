@@ -55,6 +55,9 @@ To create a new Adjacent Issue, lets say `issue-X`, follow these steps:
 
    Any number of additional article templates can be created, and each article can specify which one should be used.
 
+   Check `baseof.html` for paths that refer to `_issue-template` and replace them with `issue-X`
+
+
 
 
 3. **Create content directories:** Using the Command Line Interface, enter this command to create a content folder for the issue (assuming this is `issue-X` again):
