@@ -8,7 +8,7 @@ This is a work in progress. It assumes you have Hugo set up locally, and have cl
 
 To create a new Adjacent Issue, lets say `issue-X`, follow these steps:
 
-1. **Create assets directory:** `/assets/_issue-template` and change the name of the new folder to `issue-X`. 
+1. **Create assets directory:** `/assets/_issue-template` and change the name of the new folder to `issue-X`.
 
    i.e, you will have this:
 
@@ -27,14 +27,13 @@ To create a new Adjacent Issue, lets say `issue-X`, follow these steps:
    The new directory is where you will store all `css` and `js` needed for the issue. `/styles` is set up to use `scss`/`sass` by default
 
 
-
-2. **Create template directory:**Duplicate `/layouts/_issue-template` and change the name of the new folder to `issue-X`. 
+2. **Create template directory:** Duplicate `/layouts/_issue-template` and change the name of the new folder to `issue-X`.
 
    i.e, you will have this:
 
    ```
    /layouts
-   |--- +default
+   |--- _default
    |--- _issue-template
    		|--- baseof.html
    		|--- list.html
@@ -47,14 +46,14 @@ To create a new Adjacent Issue, lets say `issue-X`, follow these steps:
    		|--- single.html
    ```
 
-   The new directory is where you will store all the template files related to the issue. 
+   The new directory is where you will store all the template files related to the issue.
 
    * The  `baseof.html` file defines the basic HTML structure
    * The  `list.html` file will be used to list all the articles in the issue, ie, the issue's landing page
    * The  `single.html` file is the layout for an article / single post
    * The  `single-alt.html` file is an alternative layout for an article
 
-   Any number of additional article templates can be created, and each article can specify which one should be used. 
+   Any number of additional article templates can be created, and each article can specify which one should be used.
 
 
 
@@ -84,7 +83,8 @@ To create a new Adjacent Issue, lets say `issue-X`, follow these steps:
 
 ---
 
-
+<br>
+<br>
 
 
 
@@ -95,7 +95,7 @@ Editors can use Github's GUI for editing, following these steps (will be modifie
 1. Ensure you are on the `editors` branch -- use the `Branch` drop down on the top left above the file tree *(this step needs to be eliminated)*
 2. *To add text:*
    * Navigate to the article you need to update -- `/content/issue-X/article-title/_index.md`
-   * Click on the edit icon (pencil on top right) to edit. Use markdown syntax, and preview mode for feedback. 
+   * Click on the edit icon (pencil on top right) to edit. Use markdown syntax, and preview mode for feedback.
    * When you are done, add a commit message -- be descriptive -- ensure you select **"commit directly to the `editors` branch"**
 3. *To add images*:
    * Navigate to the article you need to update -- `/content/issue-X/article-title/assets`
@@ -106,25 +106,27 @@ Editors can use Github's GUI for editing, following these steps (will be modifie
 ---
 
 
-
-
+<br>
+<br>
 
 ## Deployment
 
 * There will be 4 active branches --  `development`, `staging`, `production` and `editors`
-* Dev work will be carried out on `development`. 
-* Editors changes on the `editors` branch can be merged into `development` as needed 
+* Dev work will be carried out on `development`.
+* Editors changes on the `editors` branch can be merged into `development` as needed
 * `development` will be merged into `staging`; and `staging` into `production` as needed (only one-directional)
-* There will be 2 remote repos 
-  * `github` which refers to the repo stored on git, used for collaboration. 
+* There will be 2 remote repos
+  * `github` which refers to the repo stored on git, used for collaboration.
   * `server` which refers to a bare repo stored on Shawn / ITP's servers
 
-* Using `post-receive` hooks on `server`, (sample file `post-receive.sample`), the branch will be extracted to the correct directory 
+* Using `post-receive` hooks on `server`, (sample file `post-receive.sample`), the branch will be extracted to the correct directory
 * A `deploy` script can be used to rebuild the site and push it to `server`
-* On publishing a new issue, the git history can be deleted, to save bloat from images 
+* On publishing a new issue, the git history can be deleted, to save bloat from images
 
 ---
 
+<br>
+<br>
 
 
 ## TODO:
@@ -132,11 +134,4 @@ Editors can use Github's GUI for editing, following these steps (will be modifie
 * Deployment workflow / server access
 * Github permissions / limit GUI access to `editors` branch
 * Create partials for common UI elements
-* Create documentation for editors on partials / front matter etc 
-
-
-
-
-
-
-
+* Create documentation for editors on partials / front matter etc
